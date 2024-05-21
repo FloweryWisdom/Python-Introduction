@@ -1,6 +1,6 @@
 #Create a program that prints all the elements in an array using the `for` loop.
 
-#NoteL: Not using a defined function for this program.
+#Note: Not using a defined function for this program.
 
 #Array with student names. 
 student_names = [
@@ -12,3 +12,5 @@ student_names = [
 
 for i in student_names:
     print(i)
+
+#NOTES: We can also rename the `i` variable to `student` for better readability.
