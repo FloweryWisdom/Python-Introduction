@@ -19,8 +19,16 @@ while True:
 #Step 3a: Print the number of names provided by the user. 
 print(f"\nNumber of names provided: {len(names)}")
 
-#Step 3b: Check for any repeated names in the list.
-repeated_names = set([name for name in names if names.count(name) > 1])
+#Step 3b: Check for any repeated names in the list using sets for efficiency. 
+unique_names = set()
+repeated_names = set()
+
+for name in names:
+    if name in unique_names:
+        repeated_names.add(name)
+    else:
+        unique_names.add(name)
+
 if repeated_names:
     print("Repeated names:", ", ".join(repeated_names))
 else:
