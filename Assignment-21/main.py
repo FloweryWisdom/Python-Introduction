@@ -1,4 +1,4 @@
-#Assignment 21: Create a function that receives a list as a parameter and returns the largest name in the list. s
+#Assignment 21: Create a function that receives a list as a parameter and returns the largest name in the list.
 
 def return_largest_name(names):
 
