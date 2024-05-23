@@ -34,10 +34,34 @@ if repeated_names:
 else:
     print("No repeated names found.")
 
-#Step 3c: Find the longest name in the list.
-longest_name = max(names, key=len)
-print(f"Longest name: {longest_name}")
+#Step 3c: Initialize variables to track the maximum and minimum lenghths and the corresponding names. 
+max_length = 0
+min_length = len(names[0])
+longest_names = []
+shortest_names = []
 
-#Step 3d: Find the shortest name in the list.
-shortest_name = min(names, key=len)
-print(f"Shortest name: {shortest_name}")
+#Iterrate through the list of names.
+for name in names: 
+    name_length = len(name)
+
+    #Check for the longest names: 
+    if name_length > max_length: 
+        max_length = name_length 
+        longest_names= [name]
+    elif name_length == max_length:
+        longest_names.append(name)
+    
+    #Check for the shortest names:
+    if name_length < min_length:
+        min_length = name_length
+        shortest_names = [name]
+    elif name_length == min_length:
+        shortest_names.append(name)
+
+#Step 3d: Print the results.
+
+#Print the longest names: 
+print(f"Longest name(s): {', '.join(longest_names)}")
+
+#Print the shortest names:
+print(f"Shortest name(s): {', '.join(shortest_names)}")
