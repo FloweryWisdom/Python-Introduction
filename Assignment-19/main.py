@@ -15,7 +15,7 @@ while True:
         print("Name cannot be empty. Please enter a valid name.")
         continue #continue to prompt for a valid name.
     
-    names.append(name)#Add the name to the list of names.
+    names.append(name.lower())#Add the name to the list of names.
 
     #Ask the user if they want to continue with validation. 
     while True:
@@ -42,9 +42,12 @@ def print_index_number(name, names):
             name = input("Please enter a valid name: ").strip()
             continue
 
+        #Conver the input name to lowercase for comparison.
+        name_lower = name.lower()
+
         #Check if name is within the list of names provided by the user.
-        if name in names:
-            print(f"{name} is at index {names.index(name)} in the list.")
+        if name_lower in names:
+            print(f"{name} is at index {names.index(name_lower)} in the list.")
             break
 
         else: 
