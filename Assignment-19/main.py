@@ -53,6 +53,6 @@ def print_index_number(name, names):
             continue
 
 #Step 4: Ask the user to provide the name of the user's index they would like to see.
-name_to_check = input("Please enter the name of the user's index you would like to see: ")
+name_to_check = input("Please enter the name of the user's index you would like to see: ").strip()
 
 print_index_number(name_to_check, names)
