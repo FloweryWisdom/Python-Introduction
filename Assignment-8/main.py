@@ -1,6 +1,6 @@
 def multiplication_table(number):
     #iteratre from 1 to 12.
-    for i in range(1, 13):
+    for i in range(1, 17):
         #Calculate the product of the current number and loop index. 
         result = number * i
         #Print the result in the format "number x i = result"
